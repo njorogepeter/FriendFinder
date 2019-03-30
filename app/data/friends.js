@@ -1,7 +1,7 @@
 var friends = [
     {
         "name": "Rachel",
-        "photo": "https://www.imdb.com/name/nm0000098/mediaviewer/rm226134272",
+        "photo":"https://www.imdb.com/name/nm0000098/mediaviewer/rm226134272",
         "scores":[5,1,4,4,5,1,2,5,4,1]
     },
     {
@@ -12,7 +12,7 @@ var friends = [
     {
         "name": "Phoebe",
         "photo":"https://www.imdb.com/name/nm0001435/mediaviewer/rm1084919552",
-        "scores":[4,1,2,2,5,2,3,4,5,5]
+        "scores":[4,1,2,,5,2,3,4,5,5]
     },
     {
         "name": "Joey",
@@ -51,3 +51,4 @@ var friends = [
         "scores":[4,5,1,3,5,3,2,5,4,2]
     }
 ]
+module.exports = friends;

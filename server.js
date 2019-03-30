@@ -1,5 +1,4 @@
 var express = require("express");
-var path = require("path");
 
 // Sets up the Express App
 // =============================================================
@@ -10,9 +9,12 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-var apiRoutes = require("./app/routing/apiRoutes.js");
-var htmlRoutes = require("./app/routing/htmlRoutes.js");
+// The below points our server to a series of "route" files.
+// These routes give our server a "map" of how to respond when users visit or request data from various URLs.
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
 
+// The below code effectively "starts" our server
 app.listen(PORT, function(){
-    console.log("App is listening at your port");
+    console.log("App is listening at your port" + PORT);
 });
